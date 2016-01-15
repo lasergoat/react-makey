@@ -1,13 +1,14 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Facts from './components/facts';
 
 export class App extends React.Component {
   
   constructor() {
     super(...arguments);
 
-    this.state = {color: null};
+    this.state = {color: 'violet'};
   }
 
   handleKey(e) {
@@ -52,7 +53,7 @@ export class App extends React.Component {
   render() {
     return (
       <div className={this.state.color} id="container">
-        <div className="label">{this.state.color}</div>
+        <Facts />
       </div>
     );
   }
